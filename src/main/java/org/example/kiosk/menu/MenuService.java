@@ -1,7 +1,10 @@
 package org.example.kiosk.menu;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.util.ArrayList;
 
+@Log4j2
 public enum MenuService {
 
     INSTANCE;                                //4번
@@ -17,8 +20,11 @@ public enum MenuService {
         menus.add(new Menu(4, "Espresso", 2500));
     }
 
-
     public ArrayList<Menu> getList(){       //1번
+
+        log.info("getList.....called");
+        log.info(menus);
+
         return menus;
     }
 
